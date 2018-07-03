@@ -3,7 +3,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -14,7 +14,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |body|text|null: false|
 |image|string|
@@ -38,7 +38,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
 
 ### Association
 - has_many :user
