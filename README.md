@@ -3,7 +3,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -14,7 +14,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |body|text|null: false|
 |image|string|
@@ -30,16 +30,16 @@
 |email|integer|null: false|
 
 ### Association
-- has_many :message
-- has_many :group
+- has_many :messages
+- has_many :groups,through: :members
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :user
-- has_many :message
+- has_many :users,through: :members
+- has_many :messages
