@@ -18,6 +18,7 @@
 |group_id|references|null: false, foreign_key: true|
 |body|text|
 |image|string|
+
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -26,8 +27,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|email|string|unique: true|
+|name|string|null: false, add_index: true|
+|email|string|unique: true, null: false|
 
 ### Association
 - has_many :messages
