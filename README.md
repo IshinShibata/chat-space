@@ -15,7 +15,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 |body|text|
 |image|string|
 ### Association
@@ -27,21 +27,20 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|integer|null: false|
+|email|string|unique: true|
 
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :groups,through: :members
+- has_many :groups, through: :members
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :users,through: :members
 - has_many :messages
 - has_many :members
+- has_many :users, through: :members
