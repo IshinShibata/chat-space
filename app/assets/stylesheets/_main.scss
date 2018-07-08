@@ -19,7 +19,7 @@ html,body {
     box-sizing: border-box;
     padding: 0 40px;
     background-color: #fff;
-  .chat-header__title{
+  &__title{
       padding-top: 35px;
       padding-bottom: 15px;
       box-sizing: border-box;
@@ -28,7 +28,7 @@ html,body {
       font-size: 20px;
       color: #333333;
     }
-  .chat-header__edit{
+  &__edit{
       float: right;
       display: inline-block;
       margin-top: 28px;
@@ -37,7 +37,7 @@ html,body {
       color: #38aef0;
       line-height: 40px;
     }
-  .chat-header__memberName{
+  &__memberName{
       font-size: 12px;
       color: #999999;
     }
@@ -51,22 +51,22 @@ html,body {
     overflow: scroll;
   .message{
       padding-bottom: 40px;
-    .message__content{
+    &__content{
         padding-bottom: 10px;
-      .message__content__name{
+      &__name{
           display: inline-block;
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
           }
-      .message__content__daily{
+      &__daily{
           display: inline-block;
           font-size: 12px;
           color: #999999;
           padding-left: 10px;
           }
       }
-    .message__comment{
+      &__comment{
         font-size: 14px;
         color: #434a54;
       }
@@ -80,9 +80,9 @@ html,body {
   background-color: #dddddd;
   position: absolute;
   bottom: 0;
-  .formarea__forms{
+  &__forms{
     width: 1060px;
-    .formarea__forms__form{
+    &__form{
       height: 50px;
       width: 900px;
       float: left;
