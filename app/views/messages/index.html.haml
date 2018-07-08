@@ -1,70 +1,70 @@
 .container
   .sidebar
     .header
-      .header-name
+      .header__name
         %p
           shibata
       %ul
         %li
-        = fa_icon("pencil-square-o", class: "pencil-icon")
+          = fa_icon("pencil-square-o", class: "pencil-icon")
         %li
-        = fa_icon("cog", class: "cog-icon")
+          = fa_icon("cog", class: "cog-icon")
     .groups
       .group
-        .group-name
+        .group__name
           %p
             サッカー
-            .grop-comment
+            .grop__comment
               %p
                 楽しみたい
-        .group-name
+        .group__name
           %p
             野球
-            .grop-comment
+            .grop__comment
               %p
                 楽しみたい
   .chat
     .chat-header
-      .header-title
+      .chat-header__title
         サッカー
-      .chat-edit
-        .edit-text
+      .chat-header__edit
+        .edit__text
           Edit
-      .chat-member-name
+      .chat-header__memberName
         Member：shibata
     .messages
       .message
-        .content
-          .content-name
+        .message__content
+          .message__content__name
             柴田維新
-          .content-daily
+          .message__content__daily
             2018/7/7 06:30:08
-        .message-comment
+        .message__comment
           サッカーやろう
       .message
-        .content
-          .content-name
+        .message__content
+          .message__content__name
             山田太郎
-          .content-daily
+          .message__content__daily
             2018/7/7 07:30:08
-        .message-comment
+        .message__comment
           サッカーやろう
       .message
-        .content
-          .content-name
+        .message__content
+          .message__content__name
             柴田維新
-          .content-daily
+          .message__content__daily
             2018/7/7 08:45:10
-        .message-comment
+        .message__comment
           サッカーやろう
     .formarea
       %form
         %label
-          .forms
-            %input{:type => "text", :placeholder => "type a message", :name => "message", :class => "form"}
-            .fontarea
+          .formarea__forms
+            %input{:type => "text", :placeholder => "type a message", :name => "message", :class => "formarea__forms__form"}
+            .formarea__forms-icon
               = fa_icon("image lg", class: "image-icon")
-            %input{:type => "submit", :value => "Send", :class => "submit_button"}
+            %input{:type => "submit", :value => "Send", :class => "formarea__forms__submit-button"}
 
 
 
