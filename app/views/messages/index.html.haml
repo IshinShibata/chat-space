@@ -32,7 +32,39 @@
           Edit
       .chat-member-name
         Member：shibata
-
+    .messages
+      .message
+        .content
+          .content-name
+            柴田維新
+          .content-daily
+            2018/7/7 06:30:08
+        .message-comment
+          サッカーやろう
+      .message
+        .content
+          .content-name
+            山田太郎
+          .content-daily
+            2018/7/7 07:30:08
+        .message-comment
+          サッカーやろう
+      .message
+        .content
+          .content-name
+            柴田維新
+          .content-daily
+            2018/7/7 08:45:10
+        .message-comment
+          サッカーやろう
+    .formarea
+      %form
+        %label
+          .forms
+            %input{:type => "text", :placeholder => "type a message", :name => "message", :class => "form"}
+            .fontarea
+              = fa_icon("image lg", class: "image-icon")
+            %input{:type => "submit", :value => "Send", :class => "submit_button"}
 
 
 
