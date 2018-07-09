@@ -1,28 +1,5 @@
 .container
-  .sidebar
-    .header
-      .header__name
-        %p
-          shibata
-      %ul
-        %li
-          = fa_icon("pencil-square-o", class: "pencil-icon")
-        %li
-          = fa_icon("cog", class: "cog-icon")
-    .groups
-      .group
-        .group__name
-          %p
-            サッカー
-            .group__comment
-              %p
-                楽しみたい
-        .group__name
-          %p
-            野球
-            .group__comment
-              %p
-                楽しみたい
+  = render '/devise/shared/side_bar'
   .chat
     .chat-header
       .chat-header__title
