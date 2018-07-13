@@ -19,6 +19,8 @@ html,body {
     box-sizing: border-box;
     padding: 0 40px;
     background-color: #fff;
+    position: fixed;
+    width: calc(100% - 300px);
   &__title{
       padding-top: 35px;
       padding-bottom: 15px;
@@ -87,9 +89,10 @@ html,body {
       width: 900px;
       float: left;
       border: none;
+      padding-left: 10px;
+      box-sizing: border-box;
     }
     .formarea__forms__form::-webkit-input-placeholder{
-      padding-left: 10px;
       font-size: 16px;
       color: #434a54;
     }

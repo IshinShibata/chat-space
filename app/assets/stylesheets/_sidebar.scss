@@ -46,10 +46,15 @@
       color: #FFFFFF;
       font-size: 15px;
       padding-bottom: 10px;
+    &__name{
+      color: #FFFFFF;
+      font-size: 15px;
+    }
     &__comment{
         margin-top: 5px;
         margin-bottom: 40px;
         font-size: 11px;
+        color: #FFFFFF;
       }
     }
 }
