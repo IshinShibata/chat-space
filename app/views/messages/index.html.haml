@@ -10,35 +10,54 @@
       .chat-header__memberName
         Member：shibata
     .messages
-      .message
-        .message__content
-          .message__content__name
-            柴田維新
-          .message__content__daily
-            2018/7/7 06:30:08
-        .message__comment
-          サッカーやろう
-      .message
-        .message__content
-          .message__content__name
-            山田太郎
-          .message__content__daily
-            2018/7/7 07:30:08
-        .message__comment
-          サッカーやろう
-      .message
-        .message__content
-          .message__content__name
-            柴田維新
-          .message__content__daily
-            2018/7/7 08:45:10
-        .message__comment
-          サッカーやろう
+      = render partial: 'message', collection: @messages
+      / .message
+      /   .message__content
+      /     .message__content__name
+      /       柴田維新
+      /     .message__content__daily
+      /       2018/7/7 06:30:08
+      /   .message__comment
+      /     サッカーやろう
+      / .message
+      /   .message__content
+      /     .message__content__name
+      /       山田太郎
+      /     .message__content__daily
+      /       2018/7/7 07:30:08
+      /   .message__comment
+      /     サッカーやろう
+      / .message
+      /   .message__content
+      /     .message__content__name
+      /       柴田維新
+      /     .message__content__daily
+      /       2018/7/7 08:45:10
+      /   .message__comment
+      /     サッカーやろう
     .formarea
-      %form
-        %label
-          .formarea__forms
-            %input{:type => "text", :placeholder => "type a message", :name => "message", :class => "formarea__forms__form"}
-            .formarea__forms-icon
-              = fa_icon("image lg", class: "image-icon")
-            %input{:type => "submit", :value => "Send", :class => "formarea__forms__submit-button"}
+      = form_for [@group, @message] do |f|
+        .formarea__forms
+          = f.text_field :content, class: 'formarea__forms__form', placeholder: "type a message"
+          .formarea__forms-icon
+            = f.label :image, class: 'formarea__forms-icon' do
+              = fa_icon 'image lg', class: 'image-icon'
+              = f.file_field :image, style: "display:none;"
+          = f.submit 'Send', class: 'formarea__forms__submit-button'
+      / .formarea
+      /   %form
+      /     %label
+      /       .formarea__forms
+      /         %input{:type => "text", :placeholder => "type a message", :name => "message", :class => "formarea__forms__form"}
+      /         .formarea__forms-icon
+      /           = fa_icon("image lg", class: "image-icon")
+      /         %input{:type => "submit", :value => "Send", :class => "formarea__forms__submit-button"}
+
+
+
+
+
+
+
+
+
