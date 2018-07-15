@@ -14,8 +14,7 @@ $(function(){
       ${message.content}
       ${buildImage}
   </div>
-</div>
-`
+</div>`
     return html;
   }
  $('#item_form').on('submit', function(e){
