@@ -19,6 +19,8 @@ html,body {
     box-sizing: border-box;
     padding: 0 40px;
     background-color: #fff;
+    width: 100%;
+    position: relative;
   &__title{
       padding-top: 35px;
       padding-bottom: 15px;
@@ -29,13 +31,14 @@ html,body {
       color: #333333;
     }
   &__edit{
-      float: right;
       display: inline-block;
       margin-top: 28px;
       padding: 0 20px;
       border: 1px solid #38aef0;
       color: #38aef0;
       line-height: 40px;
+      position: absolute;
+      right: 40px;
     }
   &__memberName{
       font-size: 12px;
@@ -43,7 +46,7 @@ html,body {
     }
 }
 .messages{
-    height: calc(100% - 100px);
+    height: calc(100vh - 100px - 90px);
     padding: 46px 40px 0;
     box-sizing: border-box;
     border: #eeeeee;
@@ -87,9 +90,10 @@ html,body {
       width: 900px;
       float: left;
       border: none;
+      padding-left: 10px;
+      box-sizing: border-box;
     }
     .formarea__forms__form::-webkit-input-placeholder{
-      padding-left: 10px;
       font-size: 16px;
       color: #434a54;
     }
