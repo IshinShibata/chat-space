@@ -48,7 +48,7 @@ $("#user-search-field").on("keyup", function() {
        });
      }
      else {
-       appendNoUser("一致するUserはいません");
+       appendNoUser("一致するユーザーはいません");
      }
   })
    .fail(function(){
