@@ -11,7 +11,7 @@
     .messages
       = render partial: 'message', collection: @messages
     .formarea
-      = form_for [@group, @message], html: {id: 'item_form'} do |f|
+      = form_for [@group, @message], html:{} do |f|
         .formarea__forms
           = f.text_field :content, class: 'formarea__forms__form', placeholder: "type a message"
           .formarea__forms-icon

@@ -84,10 +84,10 @@ html,body {
   position: absolute;
   bottom: 0;
   &__forms{
-    width: 1060px;
+    min-width: 700px;
     &__form{
       height: 50px;
-      width: 900px;
+      width: calc(100% - 190px);
       float: left;
       border: none;
       padding-left: 10px;
