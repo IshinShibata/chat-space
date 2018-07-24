@@ -23,7 +23,7 @@ function scrollDown(){
   $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, {duration: 1000});
 }
 
-  $('#item_form').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
 
     var formData = new FormData(this);
@@ -41,7 +41,7 @@ function scrollDown(){
       var html = buildHTML(data);
 
       $('.messages').append(html);
-      $('#item_form')[0].reset();
+      $('#new_message')[0].reset();
       scrollDown();
       $('.formarea__forms__submit-button').prop("disabled", false);
     })
