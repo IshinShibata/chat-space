@@ -41,7 +41,7 @@ function scrollDown(){
       var html = buildHTML(data);
 
       $('.messages').append(html);
-      $('.formarea__forms__form').val('');
+      $('#item_form')[0].reset();
       scrollDown();
       $('.formarea__forms__submit-button').prop("disabled", false);
     })
@@ -78,7 +78,7 @@ function scrollDown(){
   }
     else {
     clearInterval(interval);
-    }
+  }
   } , 2000 );
 
 });
