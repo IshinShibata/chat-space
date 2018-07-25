@@ -13,9 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password: 6744
-  socket: /tmp/mysql.sock
+  socket: /tmp/mykobukuro2sql.sock
 
 development:
   <<: *default
