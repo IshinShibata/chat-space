@@ -14,7 +14,8 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  socket: /tmp/mykobukuro2sql.sock
+  # password: 'kobukuro2'
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
