@@ -20,7 +20,7 @@ $(function(){
   }
 
 function scrollDown(){
-  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, {duration: 1000});
+  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, {duration: 3000});
 }
 
   $('#new_message').on('submit', function(e){
