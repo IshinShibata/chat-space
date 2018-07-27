@@ -7,4 +7,5 @@
   .message__comment
     - if message.content.present?
       = message.content
+  .message__comment
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
