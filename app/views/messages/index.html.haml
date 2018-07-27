@@ -3,11 +3,13 @@
   .chat
     .chat-header
       .chat-header__title
-        サッカー
+        = @group.name
       .chat-header__edit
         = link_to 'Edit', edit_group_path(@group)
       .chat-header__memberName
-        Member：shibata
+        Member：
+        - @group.users.each do |user|
+          = user.name
     .messages
       = render partial: 'message', collection: @messages
     .formarea
