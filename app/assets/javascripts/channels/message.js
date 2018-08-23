@@ -20,7 +20,7 @@ $(function(){
   }
 
 function scrollDown(){
-  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, {duration: 3000});
+  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, {duration: 2000});
 }
 
   $('#new_message').on('submit', function(e){
@@ -79,7 +79,7 @@ function scrollDown(){
     else {
     clearInterval(interval);
   }
-  } , 2000 );
+  } , 5000 );
 
 });
 
