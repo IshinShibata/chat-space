@@ -3,7 +3,7 @@
     .message__content__name
       = message.user.name
     .message__content__daily
-      = message.created_at.to_s(:default)
+      = message.created_at.to_s(:human)
   .message__comment
     - if message.content.present?
       = message.content
