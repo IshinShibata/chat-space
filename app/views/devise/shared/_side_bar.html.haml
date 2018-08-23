@@ -4,6 +4,9 @@
       = current_user.name
     %ul
       %li
+        = link_to destroy_user_session_path, method: :delete do
+          = fa_icon("sign-out", class: "sign-out-icon")
+      %li
         = link_to new_group_path do
           = fa_icon("pencil-square-o", class: "pencil-icon")
       %li
