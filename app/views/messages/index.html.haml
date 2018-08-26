@@ -11,7 +11,12 @@
         - @group.users.each do |user|
           = user.name
     .messages
-      = render partial: 'message', collection: @messages
+      - @messages.each do |message|
+        = render partial: 'message', locals: {message: message}
+      / - else
+      /   - @messages.each do |message|
+      /     = render partial: 'message', locals: {message: message}
+      / = render partial: 'message', collection: @messages, @likes.where(user_id: current_user.id, )
     .formarea
       = form_for [@group, @message], html:{} do |f|
         .formarea__forms
