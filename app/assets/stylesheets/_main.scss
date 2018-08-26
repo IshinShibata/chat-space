@@ -72,6 +72,7 @@ html,body {
       &__comment{
         font-size: 14px;
         color: #434a54;
+        padding-bottom: 8px;
       }
     }
 }
@@ -118,4 +119,37 @@ html,body {
       box-sizing: border-box;
     }
   }
+}
+
+.like{
+  display: inline-block;
+  // float: right;
+  list-style: none;
+}
+
+.like-btn{
+  height: 30px;
+  width: 50px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.likes-count {
+  float: right;
+
+}
+
+.caption:after{
+
+position: relative;
+content: ".";
+clear: both;
+color: white;
+}
+
+.thumbs-up-icon{
+    &-greyout{
+      opacity: 0.5;
+     }
 }
